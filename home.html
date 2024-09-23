@@ -7,13 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class=" md:mx-10 lg:mx-28">
+<body class=" md:mx-10 lg:mx-28 ">
     <main>
         <!-- nav -->
-        <nav class="static">
+        <nav class="" >
             <div class="navbar bg-base-100 bg-pink-50 mx-">
                 <div class="navbar-start">
-                    <button class="btn bg-green-300">Blog</button>
+                    <button class="btn bg-green-300"><a href="/modal.html">Blog</a></button>
                 </div>
                 <div class="navbar-center ">
                     <a class=" text-xl flex "><img src="/assets/logo.png" alt=""> <span
@@ -34,8 +34,8 @@
             </div>
         </nav>
         <!-- cards -->
-        <!-- card 1 noakhali -->
-        <section class="mt-10">
+        <section class="mt-10 ">
+            <!-- card 1 noakhali -->
             <div class="card card-side bg-base-100 shadow-xl mt-5 ">
                 <figure>
                     <img class="" src="/assets/noakhali.png" alt="Movie" />
@@ -43,7 +43,8 @@
                 <div class="card-body text-xs w-auto">
                     <div class="flex ">
                         <img class="mx-2" src="/assets/coin.png" alt="">
-                        <span id="noakhali-balance">0 BDT</span>
+                        <span id="noakhali-balance">1000</span>
+                        <span class="mx-2">BDT</span>
                     </div>
                     <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="sm:text-xs md:text-sm "> The recent floods in Noakhali have caused significant damage to
@@ -52,7 +53,7 @@
                         us in supporting the relief <br> efforts and making a positive impact on the lives of those in
                         need.</p>
                     <div class="form-control">
-                        <input id="input-add-money" type="text" placeholder="Write Donation Amount"
+                        <input id="input-noakhali-add-money" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered" required />
                     </div>
                     <div class="card-actions justify-end">
@@ -70,7 +71,8 @@
                 <div class="card-body text-xs w-auto">
                     <div class="flex ">
                         <img class="mx-2" src="/assets/coin.png" alt="">
-                        <span id="noakhali-balance">1000 BDT</span>
+                        <span id="feni-balance">1000</span>
+                        <span class="mx-2">BDT</span>
                     </div>
                     <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p class="text-sm"> The recent floods in Feni have devastated local communities, leading <br> to
@@ -80,7 +82,7 @@
                         disaster. <br> Every contribution counts towards making a real difference. Please <br> consider
                         donating today to assist those in urgent need.</p>
                     <div class="form-control">
-                        <input id="input-add-money" type="text" placeholder="Write Donation Amount"
+                        <input id="input-feni-add-money" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered" required />
                     </div>
                     <div class="card-actions justify-end">
@@ -98,7 +100,8 @@
                 <div class="card-body text-xs w-auto">
                     <div class="flex ">
                         <img class="mx-2" src="/assets/coin.png" alt="">
-                        <span id="noakhali-balance">0 BDT</span>
+                        <span id="quota-balance">1000</span>
+                        <span class="mx-2">BDT</span>
                     </div>
                     <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
                     <p class="text-sm">The recent Quota movement has resulted in numerous injuries and <br> significant
@@ -109,16 +112,17 @@
                         aiding in their recovery. Please consider making a <br> donation to support these brave
                         individuals in their time of need.</p>
                     <div class="form-control">
-                        <input id="input-add-money" type="text" placeholder="Write Donation Amount"
+                        <input id="input-quota-add-money" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered" required />
                     </div>
                     <div class="card-actions justify-end">
-                        <button class="btn bg-green-400">Donate Now</button>
+                        <button id="btn-quota" class="btn bg-green-400">Donate Now</button>
                     </div>
                 </div>
             </div>
         </section>
         <!-- card 3 injured quota end -->
+
         <!-- history -->
         <div id="history-section" class=" hidden mt-4 p-4 bg-gray-100 border border-gray-300 rounded">
             <h2 class="text-lg font-semibold">Donation History</h2>
@@ -126,5 +130,7 @@
         </div>
 
     </main>
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/utilities.js"></script>
 </body>
 </html>
