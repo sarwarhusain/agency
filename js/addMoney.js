@@ -2,83 +2,91 @@
 document.getElementById('btn-noakhali').addEventListener('click', function (event) {
     event.preventDefault()
 
-    // const noakhaliAddMoney = parseFloat(document.getElementById('input-noakhali-add-money').value);
 
-    // if (isNaN(noakhaliAddMoney)) {
-    //     alert('failed to add money');
-    //     return
-    // }
-
-    // const balance = parseFloat(document.getElementById('noakhali-balance').innerText);
-
-    // const newBalance = balance + noakhaliAddMoney;
-
-    // document.getElementById('noakhali-balance').innerText = newBalance;
     const noakhaliAddMoney = getInputFieldValueById('input-noakhali-add-money');
 
-    if (isNaN(noakhaliAddMoney)) {
-        alert('failed to add money');
+    if (isNaN(noakhaliAddMoney) || noakhaliAddMoney <= 0) {
+        alert('Invalid Number');
         return
     }
     const balance = parseFloat(document.getElementById('noakhali-balance').innerText);
+
     const newBalance = balance + noakhaliAddMoney;
     document.getElementById('noakhali-balance').innerText = newBalance.toFixed(2);
 
     const accountBalance = parseFloat(document.getElementById('account-balance').innerText);
 
-    if (accountBalance <= 0) {
-        alert('failed to donate')
+    if (accountBalance < 0 || noakhaliAddMoney > accountBalance) {
+        alert('Failed to Donate,Please Try Again')
         return
     }
-    const newAccountBalance = accountBalance - balance;
+    const newAccountBalance = accountBalance - noakhaliAddMoney;
     document.getElementById('account-balance').innerText = newAccountBalance;
-    
+
+    document.getElementById('btn-noakhali').innerText;
+    alert('Congratulations');
+
+    const div = document.createElement('div');
+    div.innerText = `${noakhaliAddMoney}  Taka is Donated for famine-2024 at Feni, Bangladesh 
+    <p>hello</p>
+    `
+    document.getElementById('history-section').appendChild(div)
 })
 //feni
 document.getElementById('btn-feni').addEventListener('click', function (event) {
     event.preventDefault()
 
-    const noakhaliAddMoney = getInputFieldValueById('input-feni-add-money');
+    const feniAddMoney = getInputFieldValueById('input-feni-add-money');
 
-    if (isNaN(noakhaliAddMoney)) {
-        alert('failed to add money');
+    if (isNaN(feniAddMoney) || feniAddMoney <= 0) {
+        alert('Invalid Number');
         return
     }
     const balance = parseFloat(document.getElementById('feni-balance').innerText);
-    const newBalance = balance + noakhaliAddMoney;
+
+    const newBalance = balance + feniAddMoney;
     document.getElementById('feni-balance').innerText = newBalance.toFixed(2);
 
     const accountBalance = parseFloat(document.getElementById('account-balance').innerText);
 
-    if (accountBalance <= 0) {
-        alert('failed to donate')
+    if (accountBalance < 0 || feniAddMoney > accountBalance) {
+        alert('Failed to Donate,Please Try Again')
         return
     }
-    const newAccountBalance = accountBalance - balance;
+    const newAccountBalance = accountBalance - feniAddMoney;
     document.getElementById('account-balance').innerText = newAccountBalance;
-    
+
+    document.getElementById('btn-feni').innerText;
+    alert('Congratulations');
+
 })
 // quota
 document.getElementById('btn-quota').addEventListener('click', function (event) {
     event.preventDefault()
 
-    const noakhaliAddMoney = getInputFieldValueById('input-quota-add-money');
 
-    if (isNaN(noakhaliAddMoney)) {
-        alert('failed to add money');
+    const quotaAddMoney = getInputFieldValueById('input-quota-add-money');
+
+    if (isNaN(quotaAddMoney) || quotaAddMoney <= 0) {
+        alert('Invalid Number');
         return
     }
     const balance = parseFloat(document.getElementById('quota-balance').innerText);
-    const newBalance = balance + noakhaliAddMoney;
+
+    const newBalance = balance + quotaAddMoney;
     document.getElementById('quota-balance').innerText = newBalance.toFixed(2);
 
     const accountBalance = parseFloat(document.getElementById('account-balance').innerText);
 
-    if (accountBalance <= 0) {
-        alert('failed to donate')
+    if (accountBalance < 0 || quotaAddMoney > accountBalance) {
+        alert('Failed to Donate,Please Try Again')
         return
     }
-    const newAccountBalance = accountBalance - balance;
+    const newAccountBalance = accountBalance - quotaAddMoney;
     document.getElementById('account-balance').innerText = newAccountBalance;
-    
+
+    document.getElementById('btn-quota').innerText;
+    alert('Congratulations');
+
 })
+

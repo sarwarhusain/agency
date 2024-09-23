@@ -13,7 +13,7 @@
         <nav class="" >
             <div class="navbar bg-base-100 bg-pink-50 mx-">
                 <div class="navbar-start">
-                    <button class="btn bg-green-300"><a href="/modal.html">Blog</a></button>
+                    <button id="btn-blog" class="btn bg-green-300"><a href="/modal.html">Blog</a></button>
                 </div>
                 <div class="navbar-center ">
                     <a class=" text-xl flex "><img src="/assets/logo.png" alt=""> <span
@@ -29,14 +29,14 @@
                 </div>
             </div>
             <div class="flex space-x-4 justify-center mt-10">
-                <button class="btn bg-green-400">Donation</button>
-                <button class="btn bg-green-400">History</button>
+                <button id="btn-donation" class="btn bg-green-400">Donation</button>
+                <button id="btn-history" class="btn bg-green-400">History</button>
             </div>
         </nav>
         <!-- cards -->
-        <section class="mt-10 ">
+        <section id="section-all" class="mt-10 ">
             <!-- card 1 noakhali -->
-            <div class="card card-side bg-base-100 shadow-xl mt-5 ">
+            <div id="noakhali" class="card card-side bg-base-100 shadow-xl mt-5 ">
                 <figure>
                     <img class="" src="/assets/noakhali.png" alt="Movie" />
                 </figure>
@@ -64,7 +64,7 @@
             <!-- card 1 noakhali end -->
 
             <!-- card 2 feni start -->
-            <div class="card card-side bg-base-100 shadow-xl mt-5 ">
+            <div id="feni" class="card card-side bg-base-100 shadow-xl mt-5 ">
                 <figure>
                     <img src="/assets/feni.png" alt="Movie" />
                 </figure>
@@ -93,7 +93,7 @@
             <!-- card 2 feni end -->
 
             <!-- card 3 injured quota start -->
-            <div class="card card-side bg-base-100 shadow-xl mt-5">
+            <div id="quota" class="card card-side bg-base-100 shadow-xl mt-5">
                 <figure>
                     <img src="/assets/quota-protest.png" alt="Movie" />
                 </figure>
@@ -120,17 +120,23 @@
                     </div>
                 </div>
             </div>
+            <!-- history -->
+       
         </section>
-        <!-- card 3 injured quota end -->
-
-        <!-- history -->
         <div id="history-section" class=" hidden mt-4 p-4 bg-gray-100 border border-gray-300 rounded">
             <h2 class="text-lg font-semibold">Donation History</h2>
             <!-- Content will be dynamically added here -->
+            <div id="history" class="grid grid-cols-2 gap-3">
+
+            </div>
         </div>
+        <!-- card 3 injured quota end -->
+
+        
 
     </main>
     <script src="./js/addMoney.js"></script>
     <script src="./js/utilities.js"></script>
+    <script src="./js/featured.js"></script>
 </body>
 </html>
