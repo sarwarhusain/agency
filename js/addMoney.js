@@ -26,9 +26,10 @@ document.getElementById('btn-noakhali').addEventListener('click', function (even
     document.getElementById('btn-noakhali').innerText;
     alert('Congratulations');
 
+
     const div = document.createElement('div');
-    div.innerText = `${noakhaliAddMoney}  Taka is Donated for famine-2024 at Feni, Bangladesh 
-    <p>hello</p>
+    div.innerText =`${noakhaliAddMoney} Taka is Donated for famine-2024 at noakhali, Bangladesh.
+       Date: ${new Date().toString()} 
     `
     document.getElementById('history-section').appendChild(div)
 })
@@ -56,8 +57,14 @@ document.getElementById('btn-feni').addEventListener('click', function (event) {
     const newAccountBalance = accountBalance - feniAddMoney;
     document.getElementById('account-balance').innerText = newAccountBalance;
 
-    document.getElementById('btn-feni').innerText;
+    document.getElementById('btn-noakhali').innerText;
     alert('Congratulations');
+
+    const div = document.createElement('div');
+    div.innerText =`${feniAddMoney} Taka is Donated for famine-2024 at noakhali, Bangladesh.
+       Date: ${new Date().toString()} 
+    `
+    document.getElementById('history-section').appendChild(div)
 
 })
 // quota
@@ -87,6 +94,12 @@ document.getElementById('btn-quota').addEventListener('click', function (event) 
 
     document.getElementById('btn-quota').innerText;
     alert('Congratulations');
+
+    const div = document.createElement('div');
+    div.innerText =`${quotaAddMoney} Taka is Donated for famine-2024 at noakhali, Bangladesh.
+       Date: ${new Date().toString()} 
+    `
+    document.getElementById('history-section').appendChild(div)
 
 })
 

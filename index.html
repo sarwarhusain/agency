@@ -10,39 +10,41 @@
 <body class=" md:mx-10 lg:mx-28 ">
     <main>
         <!-- nav -->
-        <nav class="" >
-            <div class="navbar bg-base-100 bg-pink-50 mx-">
-                <div class="navbar-start">
-                    <button id="btn-blog" class="btn bg-green-300"><a href="modal.html">Blog</a></button>
-                </div>
-                <div class="navbar-center ">
-                    <a class=" text-xl flex "><img src="assets/logo.png" alt=""> <span
-                            class="font-semibold text-xl mt-4 mx-2">Donate
-                            Bangladesh</span></a>
-                </div>
-                <div class="navbar-end">
-                    <div class="sm:flex">
-                        <img src="assets/coin.png" alt="">
-                        <!-- account balance -->
-                        <span id="account-balance" class="font-bold">5000 BDT</span>
+        <header class="sticky top-0 z-10">
+            <nav class="" >
+                <div class="navbar bg-base-100 bg-pink-50 mx-">
+                    <div class="navbar-start">
+                        <button id="btn-blog" class="btn bg-green-300"><a href="./modal.html">Blog</a></button>
+                    </div>
+                    <div class="navbar-center ">
+                        <a class=" text-xl flex "><img src="./assets/logo.png" alt=""> <span
+                                class="font-semibold text-xl mt-4 mx-2">Donate
+                                Bangladesh</span></a>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="sm:flex">
+                            <img src="./assets/coin.png" alt="">
+                            <!-- account balance -->
+                            <span id="account-balance" class="font-bold">5000 BDT</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="flex space-x-4 justify-center mt-10">
-                <button id="btn-donation" class="btn bg-green-400">Donation</button>
-                <button id="btn-history" class="btn bg-green-400">History</button>
-            </div>
-        </nav>
+                <div class="flex space-x-4 justify-center mt-10">
+                    <button id="btn-donation" class="btn bg-green-400">Donation</button>
+                    <button id="btn-history" class="btn bg-green-400">History</button>
+                </div>
+            </nav>
+        </header>
         <!-- cards -->
         <section id="section-all" class="mt-10 ">
             <!-- card 1 noakhali -->
             <div id="noakhali" class="card card-side bg-base-100 shadow-xl mt-5 ">
                 <figure>
-                    <img class="" src="assets/noakhali.png" alt="Movie" />
+                    <img class="" src="./assets/noakhali.png" alt="Movie" />
                 </figure>
                 <div class="card-body text-xs w-auto">
                     <div class="flex ">
-                        <img class="mx-2" src="assets/coin.png" alt="">
+                        <img class="mx-2" src="./assets/coin.png" alt="">
                         <span id="noakhali-balance">1000</span>
                         <span class="mx-2">BDT</span>
                     </div>
@@ -66,11 +68,11 @@
             <!-- card 2 feni start -->
             <div id="feni" class="card card-side bg-base-100 shadow-xl mt-5 ">
                 <figure>
-                    <img src="assets/feni.png" alt="Movie" />
+                    <img src="./assets/feni.png" alt="Movie" />
                 </figure>
                 <div class="card-body text-xs w-auto">
                     <div class="flex ">
-                        <img class="mx-2" src="assets/coin.png" alt="">
+                        <img class="mx-2" src="./assets/coin.png" alt="">
                         <span id="feni-balance">1000</span>
                         <span class="mx-2">BDT</span>
                     </div>
@@ -95,11 +97,11 @@
             <!-- card 3 injured quota start -->
             <div id="quota" class="card card-side bg-base-100 shadow-xl mt-5">
                 <figure>
-                    <img src="assets/quota-protest.png" alt="Movie" />
+                    <img src="./assets/quota-protest.png" alt="Movie" />
                 </figure>
                 <div class="card-body text-xs w-auto">
                     <div class="flex ">
-                        <img class="mx-2" src="assets/coin.png" alt="">
+                        <img class="mx-2" src="./assets/coin.png" alt="">
                         <span id="quota-balance">1000</span>
                         <span class="mx-2">BDT</span>
                     </div>
@@ -124,7 +126,7 @@
        
         </section>
         <div id="history-section" class=" hidden mt-4 p-4 bg-gray-100 border border-gray-300 rounded">
-            <h2 class="text-lg font-semibold">Donation History</h2>
+            <h2 class="text-lg font-semibold text-center">Donation History</h2>
             <!-- Content will be dynamically added here -->
             <div id="history" class="grid grid-cols-2 gap-3">
 
@@ -132,8 +134,13 @@
         </div>
         <!-- card 3 injured quota end -->
 
-        
-
+        <!-- success donation card -->
+        <div id="successModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <p>Donation Successful!</p>
+            </div>
+        </div>
     </main>
     <script src="./js/addMoney.js"></script>
     <script src="./js/utilities.js"></script>

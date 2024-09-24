@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="md:mx-10 lg:mx-28 ">
-    <main>
-         <!-- nav -->
-         <nav class="static">
-            <div class="navbar bg-base-100 bg-pink-50 mx-">
-                <div class="navbar-start">
-                    <button class="btn bg-green-300"><a href="./index.html">Blog</a></button>
-                </div>
-                <div class="navbar-center ">
-                    <a class=" text-xl flex "><img src="assets/logo.png" alt=""> <span
-                            class="font-semibold text-xl mt-4 mx-2">Donate
-                            Bangladesh</span></a>
-                </div>
-                <div class="navbar-end">
-                    <div class="sm:flex">
-                        <img src="assets/coin.png" alt="">
-                        <!-- account balance -->
-                        <span id="account-balance" class="font-bold">5000 BDT</span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex space-x-4 justify-center mt-10">
-                <button class="btn bg-green-400">Donation</button>
-                <button class="btn bg-green-400">History</button>
-            </div>
-        </nav>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium"> What does DOM stand for, and what is its purpose in web development?</div>
-            <div class="collapse-content">
-              <p>Answer: DOM stands for Document Object Model. It is a programming interface for web documents that represents the page so that programs can change the document structure, style, and content. The DOM allows developers to manipulate HTML and XML documents using a structured object-oriented model.</p>
-            </div>
-          </div>
-          <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium"> What is the method to select an element by its ID in the DOM?</div>
-            <div class="collapse-content">
-              <p>Answer: You can use the document.getElementById() method to select an element by its ID.</p>
-            </div>
-          </div>
-          <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">How do you change the text content of a DOM element?</div>
-            <div class="collapse-content">
-              <p>You can change the text content of a DOM element by setting the textContent property.</p>
-            </div>
-          </div>
 
-          <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">How can you add an event listener to a DOM element?</div>
-            <div class="collapse-content">
-              <p>You can add an event listener using the addEventListener method. For example, to listen for a click event.</p>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="md:mx-10 lg:mx-28 ">
+  <main>
+    <!-- nav -->
+    <nav class="static">
+      <div class="navbar bg-base-100 bg-pink-50 mx-">
+        <div class="navbar-start">
+          <button class="btn bg-green-300"><a href="./index.html">Blog</a></button>
+        </div>
+        <div class="navbar-center ">
+          <a class=" text-xl flex "><img src="./assets/logo.png" alt=""> <span
+              class="font-semibold text-xl mt-4 mx-2">Donate
+              Bangladesh</span></a>
+        </div>
+        <div class="navbar-end">
+          <div class="sm:flex">
+            <img src="./assets/coin.png" alt="">
+            <!-- account balance -->
+            <span id="account-balance" class="font-bold">5000 BDT</span>
           </div>
-    </main>
+        </div>
+      </div>
+      <div class="flex space-x-4 justify-center mt-10">
+        <button class="btn bg-green-400">Donation</button>
+        <button class="btn bg-green-400">History</button>
+      </div>
+    </nav>
+    <section class="border">
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium"> 1. What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p>The Document Object Model <span class="font-bold">(DOM)</span> is a programming interface for web documents. It represents the structure
+            of a document as a tree of objects, where each node corresponds to part of the document, such as elements,
+            attributes, and text. This allows scripts (like JavaScript) to dynamically access and manipulate the
+            content, structure, and style of web pages.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+          <p>You can select elements from the  <span class="font-bold">DOM</span> using various methods provided by the document object in JavaScript.
+            Some common methods include:document.getElementById('id'): Selects an element by its unique ID.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium"> What is event delegation in the context of the DOM, and why is
+          it useful?</div>
+        <div class="collapse-content">
+          <p>Event delegation is a technique that involves attaching a single event listener to a parent element instead
+            of multiple listeners to individual child elements. This approach is useful for several reasons:
+
+            Performance: Reduces memory usage and improves performance, especially in lists with many items.
+            Dynamic Content: Allows you to handle events for elements that are added to the  <span class="font-bold">DOM</span> after the initial load
+            without needing to attach new listeners.
+            Simplified Code: Centralizes event handling, making the code easier to manage and maintain.</p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using
+          the DOM?</div>
+        <div class="collapse-content">
+          <p><span class="font-bold">Attributes</span>:
+
+            To get an attribute: element.getAttribute('attributeName')
+            To set an attribute: element.setAttribute('attributeName', 'value')
+            To remove an attribute: element.removeAttribute('attributeName')
+            Styles:
+
+            To change inline styles: element.style.propertyName = 'value';
+            To read a computed style: window.getComputedStyle(element).propertyName
+            These methods allow you to dynamically change how elements appear and behave on a web page.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>
