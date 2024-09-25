@@ -43,10 +43,10 @@
                     <img class="" src="./assets/noakhali.png" alt="Movie" />
                 </figure>
                 <div class="card-body text-xs w-auto">
-                    <div class="flex ">
+                    <div class="flex border w-32 bg-gray-300  rounded-lg p-1">
                         <img class="mx-2" src="./assets/coin.png" alt="">
-                        <span id="noakhali-balance">1000</span>
-                        <span class="mx-2">BDT</span>
+                        <span id="noakhali-balance" class="mt-1">1000</span>
+                        <span class="mx-2 mt-1">BDT</span>
                     </div>
                     <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="sm:text-xs md:text-sm "> The recent floods in Noakhali have caused significant damage to
@@ -71,10 +71,10 @@
                     <img src="./assets/feni.png" alt="Movie" />
                 </figure>
                 <div class="card-body text-xs w-auto">
-                    <div class="flex ">
+                    <div class="flex w-32 bg-gray-300  rounded-lg p-1">
                         <img class="mx-2" src="./assets/coin.png" alt="">
-                        <span id="feni-balance">1000</span>
-                        <span class="mx-2">BDT</span>
+                        <span id="feni-balance" class="mt-1">1000</span>
+                        <span class="mx-2 mt-1">BDT</span>
                     </div>
                     <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p class="text-sm"> The recent floods in Feni have devastated local communities, leading <br> to
@@ -100,10 +100,10 @@
                     <img src="./assets/quota-protest.png" alt="Movie" />
                 </figure>
                 <div class="card-body text-xs w-auto">
-                    <div class="flex ">
+                    <div class="flex w-32 bg-gray-300  rounded-lg p-1">
                         <img class="mx-2" src="./assets/coin.png" alt="">
-                        <span id="quota-balance">1000</span>
-                        <span class="mx-2">BDT</span>
+                        <span id="quota-balance" class="mt-1">1000</span>
+                        <span class="mx-2 mt-1">BDT</span>
                     </div>
                     <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
                     <p class="text-sm">The recent Quota movement has resulted in numerous injuries and <br> significant
@@ -125,20 +125,21 @@
             <!-- history -->
        
         </section>
-        <div id="history-section" class=" hidden mt-4 p-4 bg-gray-100 border border-gray-300 rounded">
+        <div id="history-section" class=" hidden mt-4 p-4  border border-gray-00 rounded">
             <h2 class="text-lg font-semibold text-center">Donation History</h2>
             <!-- Content will be dynamically added here -->
             <div id="history" class="grid grid-cols-2 gap-3">
-
+            
             </div>
         </div>
         <!-- card 3 injured quota end -->
 
         <!-- success donation card -->
-        <div id="successModal" class="modal hidden">
+        <div id="successModal" class="modal">
             <div class="modal-content">
-                <span class="close-modal">&times;</span>
+                <span class="close-modal"></span>
                 <p>Donation Successful!</p>
+                <p>Close Confirmation</p>
             </div>
         </div>
     </main>

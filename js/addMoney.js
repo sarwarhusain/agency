@@ -28,8 +28,11 @@ document.getElementById('btn-noakhali').addEventListener('click', function (even
 
 
     const div = document.createElement('div');
-    div.innerText =`${noakhaliAddMoney} Taka is Donated for famine-2024 at noakhali, Bangladesh.
-       Date: ${new Date().toString()} 
+    div.innerHTML = `<div class="mt-3">
+    <h4 class="font-semibold">${noakhaliAddMoney} Taka is Donated for famine-2024 at Feni, Bangladesh </h4>
+   <p>Date: ${new Date().toString()}</p>
+    </div>
+
     `
     document.getElementById('history-section').appendChild(div)
 })
@@ -61,8 +64,11 @@ document.getElementById('btn-feni').addEventListener('click', function (event) {
     alert('Congratulations');
 
     const div = document.createElement('div');
-    div.innerText =`${feniAddMoney} Taka is Donated for famine-2024 at noakhali, Bangladesh.
-       Date: ${new Date().toString()} 
+    div.innerHTML = `<div class="mt-3">
+    <h4 class="font-semibold">${feniAddMoney} Taka is Donated for Flood Relief in Feni,Bangladesh</h4>
+   <p>Date: ${new Date().toString()}</p>
+    </div>
+
     `
     document.getElementById('history-section').appendChild(div)
 
@@ -96,8 +102,11 @@ document.getElementById('btn-quota').addEventListener('click', function (event) 
     alert('Congratulations');
 
     const div = document.createElement('div');
-    div.innerText =`${quotaAddMoney} Taka is Donated for famine-2024 at noakhali, Bangladesh.
-       Date: ${new Date().toString()} 
+    div.innerHTML = `<div class="mt-3">
+    <h4 class="font-semibold" >${quotaAddMoney} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh.</h4>
+   <p>Date: ${new Date().toString()}</p>
+    </div>
+
     `
     document.getElementById('history-section').appendChild(div)
 
