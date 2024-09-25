@@ -65,7 +65,7 @@ document.getElementById('btn-feni').addEventListener('click', function (event) {
 
     const div = document.createElement('div');
     div.innerHTML = `<div class="mt-3">
-    <h4 class="font-semibold">${feniAddMoney} Taka is Donated for Flood Relief in Feni,Bangladesh</h4>
+    <h4 class="font-semibold">${feniAddMoney} Taka is Donated for Flood Relief in Feni,Bangladesh.</h4>
    <p>Date: ${new Date().toString()}</p>
     </div>
 
