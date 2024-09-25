@@ -6,26 +6,26 @@ document.getElementById('btn-noakhali').addEventListener('click', function (even
     const noakhaliAddMoney = getInputFieldValueById('input-noakhali-add-money');
 
     if (isNaN(noakhaliAddMoney) || noakhaliAddMoney <= 0) {
-        alert('Invalid Number');
+        alert('Please enter a valid donation amount.');
         return
     }
+
     const balance = parseFloat(document.getElementById('noakhali-balance').innerText);
-
     const newBalance = balance + noakhaliAddMoney;
-    document.getElementById('noakhali-balance').innerText = newBalance.toFixed(2);
 
+    document.getElementById('noakhali-balance').innerText = newBalance.toFixed(2);
     const accountBalance = parseFloat(document.getElementById('account-balance').innerText);
 
-    if (accountBalance < 0 || noakhaliAddMoney > accountBalance) {
-        alert('Failed to Donate,Please Try Again')
+    if (noakhaliAddMoney > accountBalance) {
+        alert('Failed to Donate,Please Try Again');
         return
     }
+
     const newAccountBalance = accountBalance - noakhaliAddMoney;
     document.getElementById('account-balance').innerText = newAccountBalance;
 
     document.getElementById('btn-noakhali').innerText;
     alert('Congratulations');
-
 
     const div = document.createElement('div');
     div.innerHTML = `
@@ -53,7 +53,7 @@ document.getElementById('btn-feni').addEventListener('click', function (event) {
 
     const accountBalance = parseFloat(document.getElementById('account-balance').innerText);
 
-    if (accountBalance < 0 || feniAddMoney > accountBalance) {
+    if (feniAddMoney > accountBalance) {
         alert('Failed to Donate,Please Try Again')
         return
     }
@@ -91,7 +91,7 @@ document.getElementById('btn-quota').addEventListener('click', function (event) 
 
     const accountBalance = parseFloat(document.getElementById('account-balance').innerText);
 
-    if (accountBalance < 0 || quotaAddMoney > accountBalance) {
+    if (quotaAddMoney > accountBalance) {
         alert('Failed to Donate,Please Try Again')
         return
     }
