@@ -28,13 +28,13 @@ document.getElementById('btn-noakhali').addEventListener('click', function (even
 
 
     const div = document.createElement('div');
-    div.innerHTML = `<div class="mt-3">
-    <h4 class="font-semibold">${noakhaliAddMoney} Taka is Donated for famine-2024 at Feni, Bangladesh </h4>
-   <p>Date: ${new Date().toString()}</p>
+    div.innerHTML = `
+    <div class="border border-gray-500 rounded-lg >
+        <h4 class="font-semibold py-10" >${noakhaliAddMoney} Taka is Donated for famine-2024 at Feni, Bangladesh</h4>
+        <p class="bg-gray-300">Date: ${new Date().toString()}</p>
     </div>
-
     `
-    document.getElementById('history-section').appendChild(div)
+    document.getElementById('history').appendChild(div)
 })
 //feni
 document.getElementById('btn-feni').addEventListener('click', function (event) {
@@ -64,13 +64,13 @@ document.getElementById('btn-feni').addEventListener('click', function (event) {
     alert('Congratulations');
 
     const div = document.createElement('div');
-    div.innerHTML = `<div class="mt-3">
-    <h4 class="font-semibold">${feniAddMoney} Taka is Donated for Flood Relief in Feni,Bangladesh.</h4>
-   <p>Date: ${new Date().toString()}</p>
+    div.innerHTML = `
+    <div class="border border-gray-500 rounded-lg >
+        <h4 class="font-semibold" >${feniAddMoney} Taka is Donated for Flood Relief in Feni,Bangladesh</h4>
+        <p class="bg-gray-300">Date: ${new Date().toString()}</p>
     </div>
-
     `
-    document.getElementById('history-section').appendChild(div)
+    document.getElementById('history').appendChild(div)
 
 })
 // quota
@@ -102,13 +102,13 @@ document.getElementById('btn-quota').addEventListener('click', function (event) 
     alert('Congratulations');
 
     const div = document.createElement('div');
-    div.innerHTML = `<div class="mt-3">
-    <h4 class="font-semibold" >${quotaAddMoney} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh.</h4>
-   <p>Date: ${new Date().toString()}</p>
-    </div>
-
+    div.innerHTML = `
+        <div class="border border-gray-500 rounded-lg >
+            <h4 class="font-semibold" >${quotaAddMoney} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh.</h4>
+            <p class="bg-gray-200">Date: ${new Date().toString()}</p>
+        </div>
     `
-    document.getElementById('history-section').appendChild(div)
+    document.getElementById('history').appendChild(div)
 
 })
 
