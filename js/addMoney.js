@@ -2,30 +2,24 @@
 document.getElementById('btn-noakhali').addEventListener('click', function (event) {
     event.preventDefault()
 
-
     const noakhaliAddMoney = getInputFieldValueById('input-noakhali-add-money');
-
-    if (isNaN(noakhaliAddMoney) || noakhaliAddMoney <= 0) {
-        alert('Please enter a valid donation amount.');
-        return
-    }
-
     const balance = parseFloat(document.getElementById('noakhali-balance').innerText);
     const newBalance = balance + noakhaliAddMoney;
+
+    if (isNaN(noakhaliAddMoney) || noakhaliAddMoney <= 0 || noakhaliAddMoney > balance) {
+        alert('Please enter a valid donation amount.');
+        return;
+    }
 
     document.getElementById('noakhali-balance').innerText = newBalance.toFixed(2);
     const accountBalance = parseFloat(document.getElementById('account-balance').innerText);
 
-    if (noakhaliAddMoney > accountBalance) {
-        alert('Failed to Donate,Please Try Again');
-        return
-    }
-
     const newAccountBalance = accountBalance - noakhaliAddMoney;
     document.getElementById('account-balance').innerText = newAccountBalance;
 
-    document.getElementById('btn-noakhali').innerText;
-    alert('Congratulations');
+    // document.getElementById('btn-noakhali').innerText;
+    // alert('Congratulations');
+    
 
     const div = document.createElement('div');
     div.innerHTML = `

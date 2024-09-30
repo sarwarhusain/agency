@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class=" md:mx-10 lg:mx-28 ">
     <main>
         <!-- nav -->
         <header class="sticky top-0 z-10">
-            <nav class="" >
+            <nav class="">
                 <div class="navbar bg-base-100 bg-pink-50 mx-">
                     <div class="navbar-start">
                         <button id="btn-blog" class="btn bg-green-300"><a href="./modal.html">Blog</a></button>
@@ -53,7 +55,8 @@
                         <br>homes infrastructure. Your donation will help provide essential <br> supplies and to those
                         affected by this disaster. Every contribution,<br> big or small, makes difference. Please join
                         us in supporting the relief <br> efforts and making a positive impact on the lives of those in
-                        need.</p>
+                        need.
+                    </p>
                     <div class="form-control">
                         <input id="input-noakhali-add-money" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered" required />
@@ -123,28 +126,39 @@
                 </div>
             </div>
             <!-- history -->
-       
+
         </section>
         <div id="history-section" class=" hidden mt-4 p-4   border border-gray-00 rounded">
             <h2 class="text-lg font-semibold text-center">Donation History</h2>
             <!-- Content will be dynamically added here -->
             <div id="history" class="grid grid-rows-3 gap-5">
-            
+
             </div>
         </div>
         <!-- card 3 injured quota end -->
 
         <!-- success donation card -->
-        <div id="successModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal"></span>
-                <p>Donation Successful!</p>
-                <p>Close Confirmation</p>
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- Open the modal using ID.showModal() method -->
+       <div id="modal" class="hidden">
+        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
             </div>
-        </div>
+        </dialog>
+       </div>
     </main>
     <script src="./js/addMoney.js"></script>
     <script src="./js/utilities.js"></script>
     <script src="./js/featured.js"></script>
 </body>
+
 </html>
